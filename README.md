@@ -13,25 +13,25 @@ Schematic of the pipeline (Figure 1 of the paper, step by step):
 
 ## Quick start (eight sample images in this repository)
 
-`sample/` holds one original, unmodified capture from each of the eight conditions. Install the packages and measure any of them, for example the wood capture with the transparent reference:
+The eight folders `1_opaque_W/` to `8_transparent_WO/` each hold one original, unmodified capture from that condition. Install the packages and measure any of them, for example the wood capture with the transparent reference:
 
 ```
 pip install numpy scipy opencv-python matplotlib
-python vc_measure_rev6.py sample/8_transparent_WO/WO1.png --bc-roi 1104,3114,770,332 --bc-y 166 --cr-roi 903,2564,1189,141 --cr-y 70 --keystone --save result.png
+python vc_measure_rev6.py 8_transparent_WO/WO1.png --bc-roi 1104,3114,770,332 --bc-y 166 --cr-roi 903,2564,1189,141 --cr-y 70 --keystone --save result.png
 ```
 
 The console lists the 14 measured widths against the nominal gauge widths, and `result.png` shows the diagnostic figure. The arguments for all eight samples are below; each reproduces the per-capture MAE in the published data. Without the ROI arguments, the program opens a window in which the barcode and gauge regions are drawn by hand, as in the original runs. All 80 original captures are in the release archives listed under Files.
 
 | Sample | Condition | ROI arguments | MAE (mm) |
 |---|---|---|---|
-| `sample/1_opaque_W/1784091624.png` | A4 paper, opaque | `--bc-roi 1148,3117,770,323 --bc-y 161 --cr-roi 919,2560,1198,157 --cr-y 78 --keystone` | 0.0187 |
-| `sample/2_opaque_WW/1784092680.png` | white wall, opaque | `--bc-roi 1143,3165,745,484 --bc-y 73 --cr-roi 911,2576,1214,165 --cr-y 81 --keystone` | 0.1322 |
-| `sample/3_opaque_FA/1784092076.png` | fabric, opaque | `--bc-roi 1112,3113,780,346 --bc-y 173 --cr-roi 883,2564,1246,185 --cr-y 92 --keystone` | 0.0794 |
-| `sample/4_opaque_WO/1784092257.png` | wood, opaque | `--bc-roi 1136,3117,760,326 --bc-y 163 --cr-roi 915,2576,1202,210 --cr-y 105 --keystone` | 0.0479 |
-| `sample/5_transparent_W/W1.png` | A4 paper, transparent | `--bc-roi 1124,3118,770,329 --bc-y 164 --cr-roi 915,2572,1185,153 --cr-y 76 --keystone` | 0.0325 |
-| `sample/6_transparent_WW/WW1.png` | white wall, transparent | `--bc-roi 1132,3118,780,329 --bc-y 164 --cr-roi 891,2556,1250,190 --cr-y 95 --keystone` | 0.0430 |
-| `sample/7_transparent_FA/FA1.png` | fabric, transparent | `--bc-roi 1084,3211,780,268 --bc-y 41 --cr-roi 915,2564,1177,185 --cr-y 92 --keystone` | 0.0507 |
-| `sample/8_transparent_WO/WO1.png` | wood, transparent | `--bc-roi 1104,3114,770,332 --bc-y 166 --cr-roi 903,2564,1189,141 --cr-y 70 --keystone` | 0.0421 |
+| `1_opaque_W/1784091624.png` | A4 paper, opaque | `--bc-roi 1148,3117,770,323 --bc-y 161 --cr-roi 919,2560,1198,157 --cr-y 78 --keystone` | 0.0187 |
+| `2_opaque_WW/1784092680.png` | white wall, opaque | `--bc-roi 1143,3165,745,484 --bc-y 73 --cr-roi 911,2576,1214,165 --cr-y 81 --keystone` | 0.1322 |
+| `3_opaque_FA/1784092076.png` | fabric, opaque | `--bc-roi 1112,3113,780,346 --bc-y 173 --cr-roi 883,2564,1246,185 --cr-y 92 --keystone` | 0.0794 |
+| `4_opaque_WO/1784092257.png` | wood, opaque | `--bc-roi 1136,3117,760,326 --bc-y 163 --cr-roi 915,2576,1202,210 --cr-y 105 --keystone` | 0.0479 |
+| `5_transparent_W/W1.png` | A4 paper, transparent | `--bc-roi 1124,3118,770,329 --bc-y 164 --cr-roi 915,2572,1185,153 --cr-y 76 --keystone` | 0.0325 |
+| `6_transparent_WW/WW1.png` | white wall, transparent | `--bc-roi 1132,3118,780,329 --bc-y 164 --cr-roi 891,2556,1250,190 --cr-y 95 --keystone` | 0.0430 |
+| `7_transparent_FA/FA1.png` | fabric, transparent | `--bc-roi 1084,3211,780,268 --bc-y 41 --cr-roi 915,2564,1177,185 --cr-y 92 --keystone` | 0.0507 |
+| `8_transparent_WO/WO1.png` | wood, transparent | `--bc-roi 1104,3114,770,332 --bc-y 166 --cr-roi 903,2564,1189,141 --cr-y 70 --keystone` | 0.0421 |
 
 ## Files
 
@@ -40,7 +40,7 @@ The code, the run log and the analysis files are in this repository. The eight i
 | File | Contents |
 |---|---|
 | `README.md` | this file (repository) |
-| `sample/` | one original capture per condition for a quick test (repository) |
+| `1_opaque_W/` to `8_transparent_WO/` | one original capture per condition for a quick test (repository) |
 | `vc_measure_rev6.py` | measurement code (Phase 3 of the paper; repository) |
 | `results_summary.csv` | run log of the measurement code (all runs, see note below; repository) |
 | release: `1_opaque_W_VisionCrack3.zip` | opaque reference, A4 paper |
