@@ -22,7 +22,7 @@ for s,c in S.items():
     at=(t.groupby("truth_mm")["est_mm"].mean()-sorted(t.truth_mm.unique())).abs()
     out["p_wilcoxon14"]=stats.wilcoxon(at.values,ao.values).pvalue
     # capture-level: unpaired (different captures)
-    out["p_MWU"]=stats.mannwhitneyu(out["tr_pc"],out["op_pc"],alternative="two-sided").pvalue
+    out["p_MWU"]=stats.mannwhitneyu(out["tr_pc"],out["op_pc"],alternative="two-sided",method="exact").pvalue
     out["p_welch"]=stats.ttest_ind(out["tr_pc"],out["op_pc"],equal_var=False).pvalue
     # cluster bootstrap over captures for dMAE (tr - op, per-capture MAE mean)
     bs=[rng.choice(out["tr_pc"],10).mean()-rng.choice(out["op_pc"],10).mean() for _ in range(20000)]
