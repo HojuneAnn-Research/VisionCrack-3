@@ -1,0 +1,18 @@
+Data license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Hojune Ann, Yong-Rae Yu, Yongsoo Kim, Jong-Jae Lee
+
+The following material is licensed under CC BY 4.0:
+  - the images in 1_opaque_W/ to 8_transparent_WO/
+  - the eight image archives of release v1.0 (*_VisionCrack3.zip), including
+    the measurement outputs they contain
+  - results_summary.csv and the files in analysis/results/
+  - overview.gif and overview_real.gif
+
+You may share and adapt this material for any purpose, provided that you give
+appropriate credit, provide a link to the license, and indicate if changes were
+made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The source code (*.py) is licensed separately under the MIT License (see LICENSE).

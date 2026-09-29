@@ -110,3 +110,10 @@ python summarize.py                               # summary of all abl_*.csv in 
 ## Note on the run log
 
 `results_summary.csv` lists every run of the measurement code. The transparent-fabric captures (FA1-FA10) were measured twice with re-drawn regions of interest; the results reported in the paper are those of the later run (the results in `7_transparent_FA_VisionCrack3/results/`).
+
+## License
+
+- Code (`*.py`): MIT License, see [`LICENSE`](LICENSE).
+- Data (images, release archives, run log, analysis outputs, GIFs): CC BY 4.0, see [`LICENSE-DATA`](LICENSE-DATA).
+
+If you use the data or code, please cite the paper (reference will be added after publication).
