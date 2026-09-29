@@ -73,9 +73,10 @@ analysis/
   capture_level_stats.py      capture-level statistics (Table 3, substrate test)
   ablation.py                 ablation and parameter sensitivity (Table 4), sigma / k_q exchange tests
   summarize.py                summary of the ablation output
+  wood_cause.py               target-side analysis of the opaque vs transparent difference (Experiment 3)
   recover.py, recover2.py, find_cr.py, find_cr2.py, refpart.py, runone.py
                               recovery of the regions of interest (see below)
-  results/                    outputs of the scripts above (roi_*.json, abl_*.csv, swap_*.csv, ...)
+  results/                    outputs of the scripts above (roi_*.json, abl_*.csv, swap_*.csv, wood_cause_*.csv, ...)
 ```
 
 To run the scripts, unzip the eight condition archives into a folder `images/`, put `results_summary.csv` into `images/`, and keep `analysis/` next to `images/`.
@@ -105,6 +106,7 @@ Run from the `analysis/` folder; the scripts read the data from `../images/` (or
 python capture_level_stats.py                     # Table 3 statistics
 python ablation.py 8_transparent_WO_VisionCrack3  # Table 4 for one condition -> abl_<condition>.csv
 python summarize.py                               # summary of all abl_*.csv in the current folder
+python wood_cause.py                              # Experiment 3, tests of the cause -> wood_cause_*.csv
 ```
 
 ## Note on the run log
